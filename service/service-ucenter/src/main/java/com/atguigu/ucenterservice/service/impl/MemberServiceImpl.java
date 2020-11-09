@@ -97,4 +97,12 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
         Member member = baseMapper.selectOne(wrapper);
         return member;
     }
+
+    @Override
+    public Integer registerCount(String day) {
+        System.out.println("=======registerCount");
+        Integer count = baseMapper.selectRegisterCount(day);
+        System.out.println("count = " + count);
+        return count;
+    }
 }

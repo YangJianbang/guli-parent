@@ -24,13 +24,19 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/ucenter/member")
-@CrossOrigin
 public class MemberController {
 
     @Autowired
     MemberService memberService;
     @Autowired
     MemberOrder memberOrder;
+
+    //根据日期获取用户信息
+    @GetMapping("registerCount/{day}")
+    public R registerCount(@PathVariable String day) {
+        Integer count = memberService.registerCount(day);
+        return R.ok().data("countRegister",count);
+    }
 
     //根据用户ID获取用户信息
     @GetMapping("getInfoUc/{id}")

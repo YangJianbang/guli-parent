@@ -19,7 +19,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/orderservice/t-pay-log")
-@CrossOrigin
 public class TPayLogController {
     @Autowired
     TPayLogService payLogService;

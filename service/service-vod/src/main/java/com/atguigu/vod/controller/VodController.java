@@ -20,7 +20,6 @@ import java.io.InputStream;
 
 @RestController
 @RequestMapping("/eduvod/vod")
-@CrossOrigin
 public class VodController {
 
 

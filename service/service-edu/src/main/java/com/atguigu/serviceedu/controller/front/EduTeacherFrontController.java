@@ -16,7 +16,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/serviceedu/frontteacher")
-@CrossOrigin
 public class EduTeacherFrontController {
     @Autowired
     EduTeacherService teacherService;

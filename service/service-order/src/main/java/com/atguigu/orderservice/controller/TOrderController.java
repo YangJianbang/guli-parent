@@ -32,7 +32,6 @@ import java.util.HashMap;
  */
 @RestController
 @RequestMapping("/orderservice/t-order")
-@CrossOrigin
 public class TOrderController {
 
     @Autowired

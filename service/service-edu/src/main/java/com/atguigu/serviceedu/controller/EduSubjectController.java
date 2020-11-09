@@ -28,7 +28,6 @@ import java.util.List;
 @Api(description = "课程分类")
 @RestController
 @RequestMapping("/serviceedu/subject")
-@CrossOrigin
 public class EduSubjectController {
     @Autowired
     ExcelListener excelListener;
