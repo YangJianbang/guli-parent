@@ -2,11 +2,16 @@ package com.atguigu.serviceedu.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
+import java.util.List;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +29,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="EduSubject对象", description="课程科目")
+@ApiModel(value = "EduSubject对象", description = "课程科目")
 public class EduSubject implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -49,6 +54,12 @@ public class EduSubject implements Serializable {
     @ApiModelProperty(value = "更新时间")
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
+
+    @TableField(exist = false)
+    private Integer level;
+
+    @TableField(exist = false)
+    private List<EduSubject> children = new ArrayList<>();
 
 
 }
